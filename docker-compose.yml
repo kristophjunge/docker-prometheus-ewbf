@@ -10,5 +10,3 @@ services:
       MINER_ID: "${MINER_ID}"
     ports:
       - "9207:9207"
-    volumes:
-      - "/etc/ssl/certs:/etc/ssl/certs" # Needed for HTTPS calls
