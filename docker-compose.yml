@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  prometheus_ewbf:
+    container_name: prometheus_ewbf
+    build: .
+    environment:
+      TEST_MODE: "${TEST_MODE}"
+      API_URL: "${API_URL}"
+      MINER_ID: "${MINER_ID}"
+    ports:
+      - "9207:9207"
+    volumes:
+      - "/etc/ssl/certs:/etc/ssl/certs" # Needed for HTTPS calls
